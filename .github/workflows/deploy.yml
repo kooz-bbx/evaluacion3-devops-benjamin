@@ -119,17 +119,17 @@ jobs:
             frontend=$FRONTEND_ECR:${{ github.sha }} \
             -n eval2
 
-      # 15. Esperar que los deployments estén listos (rollout)
-      - name: Esperar rollout back-ventas
-        run: kubectl rollout status deployment/back-ventas -n eval2
+#      # 15. Esperar que los deployments estén listos (rollout)
+#      - name: Esperar rollout back-ventas
+#        run: kubectl rollout status deployment/back-ventas -n eval2
 
-      - name: Esperar rollout back-despachos
-        run: kubectl rollout status deployment/back-despachos -n eval2
+#      - name: Esperar rollout back-despachos
+#        run: kubectl rollout status deployment/back-despachos -n eval2
 
-      - name: Esperar rollout frontend
-        run: kubectl rollout status deployment/frontend -n eval2
+#      - name: Esperar rollout frontend
+#        run: kubectl rollout status deployment/frontend -n eval2
 
-      # 16. Mostrar la URL pública del frontend (LoadBalancer)
+#      # 16. Mostrar la URL pública del frontend (LoadBalancer)
       - name: Obtener URL pública del frontend
         run: |
           echo "URL del frontend:"
