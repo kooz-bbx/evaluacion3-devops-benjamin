@@ -17,7 +17,7 @@ resource "aws_security_group" "eks_cluster_sg" {
 
   # Permite todo el tráfico saliente (para comunicación con nodos y AWS APIs)
   egress {
-    description = "Todo el tráfico saliente permitido"
+    description = "Todo el trafico saliente permitido"
     from_port   = 0
     to_port     = 0
     protocol    = "-1"
@@ -40,7 +40,7 @@ resource "aws_security_group" "eks_nodes_sg" {
 
   # Comunicación entre nodos (requerida por Kubernetes)
   ingress {
-    description = "Comunicación entre nodos del clúster"
+    description = "Comunicacion entre nodos del cluster"
     from_port   = 0
     to_port     = 0
     protocol    = "-1"
@@ -49,7 +49,7 @@ resource "aws_security_group" "eks_nodes_sg" {
 
   # Tráfico desde el plano de control (kubelet, métricas, etc.)
   ingress {
-    description     = "Tráfico del plano de control hacia los nodos"
+    description     = "Trafico del plano de control hacia los nodos"
     from_port       = 1025
     to_port         = 65535
     protocol        = "tcp"
@@ -76,7 +76,7 @@ resource "aws_security_group" "eks_nodes_sg" {
 
   # Permite todo el tráfico saliente (para ECR, S3, CloudWatch, etc.)
   egress {
-    description = "Todo el tráfico saliente permitido"
+    description = "Todo el trafico saliente permitido"
     from_port   = 0
     to_port     = 0
     protocol    = "-1"
