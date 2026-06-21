@@ -25,8 +25,8 @@ spec:
     spec:
       containers:
         - name: back-ventas
-          # La imagen se actualiza automáticamente por el pipeline CI/CD
-          image: ACCOUNT_ID.dkr.ecr.us-east-1.amazonaws.com/eval2-back-ventas:latest
+          # CORREGIDO: Se añade el ID real de tu cuenta AWS Academy
+          image: 420642166761.dkr.ecr.us-east-1.amazonaws.com/eval2-back-ventas:latest
           ports:
             - containerPort: 8080
           env:
@@ -59,14 +59,14 @@ spec:
             httpGet:
               path: /actuator/health
               port: 8080
-            initialDelaySeconds: 40
+            initialDelaySeconds: 60
             periodSeconds: 10
             failureThreshold: 6
           livenessProbe:
             httpGet:
               path: /actuator/health
               port: 8080
-            initialDelaySeconds: 60
+            initialDelaySeconds: 90
             periodSeconds: 15
           resources:
             requests:
