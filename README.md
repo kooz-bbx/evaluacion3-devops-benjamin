@@ -296,3 +296,22 @@ Dentro del namespace `eval2`, los services se descubren por nombre corto. Kubern
 - Docker Desktop
 - Git
 - Visual Studio Code
+
+---
+
+## 🚀 Acceso al Proyecto Desplegado
+
+El proyecto ha sido completamente automatizado mediante un pipeline de CI/CD utilizando GitHub Actions, Docker, AWS ECR y AWS EKS.
+
+* **URL Pública del Frontend (LoadBalancer):** http://a14ff2ffd70424e36ab2e0250eab6b2a-857952864.us-east-1.elb.amazonaws.com
+
+### 🛠️ Comandos de Monitoreo Utilizados
+
+Para verificar el estado de la infraestructura en Kubernetes, se utilizan los siguientes comandos:
+
+```bash
+# Ver el estado de todos los Pods en el namespace eval2
+kubectl get pods -n eval2
+
+# Obtener los servicios activos y las URLs de acceso
+kubectl get svc -n eval2
