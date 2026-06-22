@@ -321,3 +321,5 @@ kubectl get svc -n eval2
 
 ## EN EL PIPELINE TUVE QUE DEJAR COMENTADO  LAS LINEAS DEL 122 lal 130 
 ## ya que no me dejaba levarlo bien desde la terminal y la IA me dijo que esos pasos me interferian
+
+#PASO DE EDICION PARA LA PRECENTACION 
