@@ -11,6 +11,13 @@ resource "aws_cloudwatch_log_group" "eks_cluster" {
     Name    = "${var.project_name}-eks-cluster-logs"
     Project = var.project_name
   }
+
+  lifecycle {
+    ignore_changes = [
+      tags,
+      retention_in_days
+    ]
+  }
 }
 
 resource "aws_cloudwatch_log_group" "back_ventas" {

@@ -26,7 +26,7 @@ spec:
       containers:
         - name: back-ventas
           # CORREGIDO: Se añade el ID real de tu cuenta AWS Academy
-          image: 420642166761.dkr.ecr.us-east-1.amazonaws.com/eval2-back-ventas:latest
+          image: 0225920204638.dkr.ecr.us-east-1.amazonaws.com/eval2-back-ventas:latest
           ports:
             - containerPort: 8080
           env:
