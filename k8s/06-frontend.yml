@@ -23,10 +23,12 @@ spec:
       labels:
         app: frontend
     spec:
+      imagePullSecrets:
+        - name: ecr-secret
       containers:
         - name: frontend
           # La imagen se actualiza automáticamente por el pipeline CI/CD
-          image: 0225920204638.dkr.ecr.us-east-1.amazonaws.com/eval2-frontend:latest
+          image: 022592004638.dkr.ecr.us-east-1.amazonaws.com/eval2-frontend:latest
           ports:
             - containerPort: 80
           readinessProbe:

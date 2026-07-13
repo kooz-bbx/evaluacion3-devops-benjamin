@@ -23,10 +23,12 @@ spec:
       labels:
         app: back-ventas
     spec:
+      imagePullSecrets:
+        - name: ecr-secret
       containers:
         - name: back-ventas
           # CORREGIDO: Se añade el ID real de tu cuenta AWS Academy
-          image: 0225920204638.dkr.ecr.us-east-1.amazonaws.com/eval2-back-ventas:latest
+          image: 022592004638.dkr.ecr.us-east-1.amazonaws.com/eval2-back-ventas:latest
           ports:
             - containerPort: 8080
           env:

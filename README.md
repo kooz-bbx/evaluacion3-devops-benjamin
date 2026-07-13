@@ -143,28 +143,6 @@ kubectl create secret generic eval2-secret \
 
 El archivo `.github/workflows/deploy.yml` automatiza el flujo completo:
 
-```
-Push a rama 'deploy'
-        │
-        ▼
-1. Checkout del código
-2. Configurar credenciales AWS (desde GitHub Secrets)
-3. Login en Amazon ECR
-4. Obtener Account ID dinámicamente
-5. Build imagen back-ventas  ──► Push a ECR (:sha + :latest)
-6. Build imagen back-despachos ─► Push a ECR (:sha + :latest)
-7. Build imagen frontend ──────► Push a ECR (:sha + :latest)
-8. Instalar kubectl
-9. Conectar al clúster EKS
-10. Aplicar manifiestos k8s/
-11. kubectl set image → back-ventas
-12. kubectl set image → back-despachos
-13. kubectl set image → frontend
-14. Esperar rollout back-ventas
-15. Esperar rollout back-despachos
-16. Esperar rollout frontend
-17. Mostrar URL pública del frontend
-```
 
 **Trigger:** push a la rama `deploy` o ejecución manual (`workflow_dispatch`).
 
@@ -321,5 +299,3 @@ kubectl get svc -n eval2
 
 ## EN EL PIPELINE TUVE QUE DEJAR COMENTADO  LAS LINEAS DEL 122 lal 130 
 ## ya que no me dejaba levarlo bien desde la terminal y la IA me dijo que esos pasos me interferian
-
-#PASO DE EDICION PARA LA PRECENTACION 
